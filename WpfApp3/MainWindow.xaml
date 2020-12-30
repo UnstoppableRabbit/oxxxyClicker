@@ -6,6 +6,22 @@
         mc:Ignorable="d"
     Loaded="MainWindow_Loaded"
         Title="MainWindow" Height="600" Width="1066.5">
+    <Window.Resources>
+        <Style x:Key="MyButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                             VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
+
     <TabControl  x:FieldModifier="public" x:Name="TabOxy">
         <TabItem MouseLeftButtonDown="Double_missclick" TabIndex="0">
 
@@ -50,13 +66,35 @@
                     <Button Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="70" Height="40.5" Click="Button_Click_1">
                         <Image Source="C:\Users\ASUS\Downloads\OxyBag.jpg"/>
                     </Button>
-                </Grid>
+
+                <Button BorderThickness="0" Style="{StaticResource MyButtonStyle}"  Background="Transparent"
+     x:Name="slava" Width="200" Height="200" Click="gnoynij_Click" Margin="-200,0,200,0">
+                    <Image Source = "C:\Users\ASUS\Downloads\11.png"/>
+                </Button>
+
+                <Button BorderThickness="0" Style="{StaticResource MyButtonStyle}"  Background="Transparent"
+     x:Name="jhony" Grid.Column="1" Grid.Row="2" Width="200" Height="200" Margin="0,200,0,-200"  Click="jhony_Click">
+                    <Image Source = "C:\Users\ASUS\Downloads\Bez_imeni.png"/>
+                </Button>
+
+                <Button BorderThickness="0" Style="{StaticResource MyButtonStyle}"  Background="Transparent"
+     x:Name="lsp" Grid.Column="2" Grid.Row="1" Width="200" Height="200" Margin="200,0,-200,0"  Click="olegi_Click">
+                    <Image Source = "C:\Users\ASUS\Downloads\image-removebg-preview.png"/>
+                </Button>
+
+            </Grid>
           
 
         </TabItem>
 
         <TabItem TabIndex="1">
             <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition>
                     </RowDefinition>
@@ -69,6 +107,22 @@
                 <TextBlock Foreground="BlueViolet" Grid.Row="1" FontSize="29" FontWeight="Bold" FontFamily="Calibri" >Кнопки</TextBlock>
                 <Button Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="70" Height="40.5" Click="Back_Click">
                     <Image Source="C:\Users\ASUS\Downloads\back.jpg"></Image>
+                </Button>
+
+                <Button x:Name="b1" Width="160" Height="90" Grid.Row="0" Grid.Column="0">
+                    
+                </Button>
+
+                <Button x:Name="b2" Width="160" Height="90" Grid.Row="0" Grid.Column="1">
+
+                </Button>
+
+                <Button x:Name="b3" Width="160" Height="90" Grid.Row="0" Grid.Column="2">
+
+                </Button>
+
+                <Button x:Name="b4" Width="160" Height="90" Grid.Row="0" Grid.Column="3">
+
                 </Button>
             </Grid>
         </TabItem>
