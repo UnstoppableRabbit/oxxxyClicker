@@ -21,7 +21,6 @@
         </Style>
     </Window.Resources>
     
-
     <TabControl  x:FieldModifier="public" x:Name="TabOxy">
         <TabItem MouseLeftButtonDown="Double_missclick" TabIndex="0">
 
@@ -35,18 +34,20 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition Width="200"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                    </Grid.RowDefinitions>
-
-                    <TextBlock FontSize="23" FontWeight="Bold" Foreground="DeepPink" Grid.Row="0" Grid.Column="2" x:Name="qwe">0</TextBlock>
-                    <Button Grid.Column="2" Grid.Row="2" HorizontalAlignment="Right" Height="40" Width="40" x:Name="mute_button" VerticalAlignment="Bottom" Foreground="BlueViolet" FontSize="18" Click="mute_button_Click">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="186"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="186"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackPanel  Grid.Row="0" Grid.Column="2">
+                        <TextBlock FontSize="23" FontWeight="Bold" Foreground="DeepPink" Grid.Row="0" Grid.Column="2" x:Name="qwe">0</TextBlock>
+                       <TextBlock FontSize="23" Margin="0,20,0,0" FontWeight="Bold" Foreground="Gold" Grid.Row="0" Grid.Column="2" x:Name="qwe2">0</TextBlock>
+                </StackPanel>
+                <Button Cursor="Hand" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Right" Height="40" Width="40" x:Name="mute_button" VerticalAlignment="Bottom" Foreground="BlueViolet" FontSize="18" Click="mute_button_Click">
                         <Image x:Name="muteImage" Source="C:\Users\ASUS\Downloads\play.jpg"/>
                     </Button>
-                    <Button Width="370" Height="177" x:Name="oxxxybutton" Grid.Column="1" Grid.Row="1" Click="Button_Click">
-                        <Image Source="C:\Users\ASUS\Desktop\Screenshot_155.png">
+                    <Button Cursor="Hand" Width="370" Height="177" x:Name="oxxxybutton" Grid.Column="1" Grid.Row="1" Click="Button_Click">
+                        <Image x:Name="bt1" Source="C:\Users\ASUS\Desktop\Screenshot_155.png">
                         </Image>
                         <Button.Triggers>
                             <EventTrigger RoutedEvent="Button.Click">
@@ -54,34 +55,39 @@
                                     <BeginStoryboard>
                                         <Storyboard>
                                             <DoubleAnimation Storyboard.TargetProperty="Width" Storyboard.TargetName="oxxxybutton"
-                               From="350" To="370"  AutoReverse="True" RepeatBehavior="0:0:0.1" Duration="0:0:0.1"  />
+                                            From="350" To="370"  AutoReverse="True" RepeatBehavior="0:0:0.1" Duration="0:0:0.1"  />
                                             <DoubleAnimation Storyboard.TargetProperty="Height" Storyboard.TargetName="oxxxybutton"
-                               From="165" To="177"  AutoReverse="False" RepeatBehavior="0:0:0.1" Duration="0:0:0.1"  />
+                                            From="165" To="177"  AutoReverse="False" RepeatBehavior="0:0:0.1" Duration="0:0:0.1"  />
                                         </Storyboard>
                                     </BeginStoryboard>
                                 </EventTrigger.Actions>
                             </EventTrigger>
                         </Button.Triggers>
                     </Button>
-                    <Button Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="70" Height="40.5" Click="Button_Click_1">
+                    <Button Cursor="Hand" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="70" Height="40.5" Click="Button_Click_1">
                         <Image Source="C:\Users\ASUS\Downloads\OxyBag.jpg"/>
                     </Button>
 
-                <Button BorderThickness="0" Style="{StaticResource MyButtonStyle}"  Background="Transparent"
-     x:Name="slava" Width="200" Height="200" Click="gnoynij_Click" Margin="-200,0,200,0">
+                <Button Cursor="Hand" BorderThickness="0" Style="{StaticResource MyButtonStyle}"  Background="Transparent"
+     x:Name="slava" Width="200" Height="200" Click="gnoynij_Click" Margin="-204,0,204,0">
                     <Image Source = "C:\Users\ASUS\Downloads\11.png"/>
                 </Button>
 
-                <Button BorderThickness="0" Style="{StaticResource MyButtonStyle}"  Background="Transparent"
-     x:Name="jhony" Grid.Column="1" Grid.Row="2" Width="200" Height="200" Margin="0,200,0,-200"  Click="jhony_Click">
+                <Button Cursor="Hand" BorderThickness="0" Style="{StaticResource MyButtonStyle}"  Background="Transparent"
+     x:Name="jhony" Grid.Column="1" Grid.Row="2" Width="200" Height="200" Margin="0,189,0,-189"  Click="jhony_Click">
                     <Image Source = "C:\Users\ASUS\Downloads\Bez_imeni.png"/>
                 </Button>
 
-                <Button BorderThickness="0" Style="{StaticResource MyButtonStyle}"  Background="Transparent"
-     x:Name="lsp" Grid.Column="2" Grid.Row="1" Width="200" Height="200" Margin="200,0,-200,0"  Click="olegi_Click">
+                <Button Cursor="Hand" BorderThickness="0" Style="{StaticResource MyButtonStyle}"  Background="Transparent"
+     x:Name="lsp" Grid.Column="2" Grid.Row="1" Width="200" Height="200" Margin="204,0,-204,0"  Click="olegi_Click">
                     <Image Source = "C:\Users\ASUS\Downloads\image-removebg-preview.png"/>
                 </Button>
 
+
+                <Button Cursor="Hand" BorderThickness="0" Style="{StaticResource MyButtonStyle}"  Background="Transparent"
+     x:Name="porchy" Grid.Column="1" Grid.Row="0" Width="200" Height="200" Margin="0,-200,0,200"  Click="porchy_Click">
+                    <Image Source = "C:\Users\ASUS\Downloads\pork.png"/>
+                </Button>
             </Grid>
           
 
@@ -108,22 +114,76 @@
                 <Button Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="70" Height="40.5" Click="Back_Click">
                     <Image Source="C:\Users\ASUS\Downloads\back.jpg"></Image>
                 </Button>
+                <StackPanel>
+                    <Button Margin="0,100,0,0" VerticalAlignment="Center" x:Name="b1" FontSize="22" Foreground="BlueViolet" Width="160" Height="90" Click="Bg1_Click" Grid.Row="0" Grid.Column="0">
+                        <Image Source = "C:\Users\ASUS\Downloads\maxresdefault-3.jpg"/>
+                    </Button>
+                    <TextBlock HorizontalAlignment="Center" Foreground="BlueViolet" FontSize="24" FontWeight="Bold" FontFamily="Calibri" >
+                   0 clicks
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <Button Margin="0,100,0,0" VerticalAlignment="Center" x:Name="b2" FontSize="22" Foreground="BlueViolet" Width="160" Height="90" Click="Bg2_Click" Grid.Row="0" Grid.Column="0">
+                        <Image Source = "C:\Users\ASUS\Downloads\b2.jpg"/>
+                    </Button>
+                    <TextBlock HorizontalAlignment="Center" Foreground="BlueViolet" FontSize="24" FontWeight="Bold" FontFamily="Calibri" >
+                    700 clicls
+                    </TextBlock>
+                </StackPanel>
 
-                <Button x:Name="b1" Width="160" Height="90" Grid.Row="0" Grid.Column="0">
-                    
-                </Button>
+                <StackPanel Grid.Column="2">
+                    <Button Margin="0,100,0,0" VerticalAlignment="Center" x:Name="b3" FontSize="22" Foreground="BlueViolet" Width="160" Height="90" Click="Bg3_Click" Grid.Row="0" Grid.Column="0">
+                        <Image Source = "C:\Users\ASUS\Downloads\b3.jpg"/>
+                    </Button>
+                    <TextBlock HorizontalAlignment="Center" Foreground="BlueViolet" FontSize="24" FontWeight="Bold" FontFamily="Calibri" >
+                    1703 clicls
+                    </TextBlock>
+                </StackPanel>
 
-                <Button x:Name="b2" Width="160" Height="90" Grid.Row="0" Grid.Column="1">
+                <StackPanel Grid.Column="3">
+                    <Button Margin="0,100,0,0" VerticalAlignment="Center" x:Name="b4" FontSize="22" Foreground="BlueViolet" Width="160" Height="90" Click ="Bg4_Click" Grid.Row="0" Grid.Column="0">
+                        <Image Source = "C:\Users\ASUS\Downloads\b4.jpg"/>
+                    </Button>
+                    <TextBlock HorizontalAlignment="Center" Foreground="Gold" FontSize="24" FontWeight="Bold" FontFamily="Calibri" >
+                    1000 golden clicks
+                    </TextBlock>
+                </StackPanel>
 
-                </Button>
+                <StackPanel Grid.Column="0" Grid.Row="1">
+                    <Button Margin="0,100,0,0" VerticalAlignment="Center" FontSize="22" Foreground="BlueViolet" Click="Bt1_Click" Width="160" Height="76.5" Grid.Row="0" Grid.Column="0">
+                        <Image  Source = "C:\Users\ASUS\Desktop\Screenshot_155.png"/>
+                    </Button>
+                    <TextBlock HorizontalAlignment="Center" Foreground="BlueViolet" FontSize="24" FontWeight="Bold" FontFamily="Calibri" >
+                    0 clicls
+                    </TextBlock>
+                </StackPanel>
 
-                <Button x:Name="b3" Width="160" Height="90" Grid.Row="0" Grid.Column="2">
+                <StackPanel Grid.Column="1" Grid.Row="1">
+                    <Button Margin="0,100,0,0" VerticalAlignment="Center"  FontSize="22" Foreground="BlueViolet" Click="Bt2_Click" Width="160" Height="76.5" Grid.Row="0" Grid.Column="0">
+                        <Image Source = "C:\Users\ASUS\Downloads\oxykit.png"/>
+                    </Button>
+                    <TextBlock HorizontalAlignment="Center" Foreground="BlueViolet" FontSize="24" FontWeight="Bold" FontFamily="Calibri" >
+                    1000 clicls
+                    </TextBlock>
+                </StackPanel>
 
-                </Button>
+                <StackPanel Grid.Column="2" Grid.Row="1">
+                    <Button Margin="0,100,0,0" VerticalAlignment="Center"  FontSize="22" Foreground="BlueViolet" Click="Bt3_Click" Width="160" Height="76.5" Grid.Row="0" Grid.Column="0">
+                        <Image Source = "C:\Users\ASUS\Downloads\bt3.png"/>
+                    </Button>
+                    <TextBlock HorizontalAlignment="Center" Foreground="BlueViolet" FontSize="24" FontWeight="Bold" FontFamily="Calibri" >
+                   2000 clicls
+                    </TextBlock>
+                </StackPanel>
 
-                <Button x:Name="b4" Width="160" Height="90" Grid.Row="0" Grid.Column="3">
-
-                </Button>
+                <StackPanel Grid.Column="3" Grid.Row="1">
+                    <Button Margin="0,100,0,0" VerticalAlignment="Center"  FontSize="22" Foreground="BlueViolet" Click="Bt4_Click" Width="160" Height="76.5" Grid.Row="0" Grid.Column="0">
+                        <Image Source = "C:\Users\ASUS\Downloads\bt4.jpg"/>
+                    </Button>
+                    <TextBlock HorizontalAlignment="Center" Foreground="Gold" FontSize="24" FontWeight="Bold" FontFamily="Calibri" >
+                    2000 golden clicls
+                    </TextBlock>
+                </StackPanel>
             </Grid>
         </TabItem>
     </TabControl>

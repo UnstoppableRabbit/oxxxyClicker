@@ -34,5 +34,17 @@ namespace WpfApp3.Properties {
                 this["count"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public long count2 {
+            get {
+                return ((long)(this["count2"]));
+            }
+            set {
+                this["count2"] = value;
+            }
+        }
     }
 }
