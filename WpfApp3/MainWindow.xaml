@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
     Loaded="MainWindow_Loaded"
-        Title="MainWindow" Height="600" Width="1066.5">
+        Title="OxxxyClicker" Height="600" Width="1066.5">
     <Window.Resources>
         <Style x:Key="MyButtonStyle" TargetType="Button">
             <Setter Property="Template">
@@ -47,7 +47,7 @@
                         <Image x:Name="muteImage" Source="C:\Users\ASUS\Downloads\play.jpg"/>
                     </Button>
                     <Button Cursor="Hand" Width="370" Height="177" x:Name="oxxxybutton" Grid.Column="1" Grid.Row="1" Click="Button_Click">
-                        <Image x:Name="bt1" Source="C:\Users\ASUS\Desktop\Screenshot_155.png">
+                        <Image x:Name="bt1" Source="C:\Users\ASUS\Desktop\for_clicker\Screenshot_155.png">
                         </Image>
                         <Button.Triggers>
                             <EventTrigger RoutedEvent="Button.Click">

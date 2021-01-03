@@ -12,3 +12,6 @@ C:\Users\ASUS\source\repos\WpfApp3\WpfApp3\obj\Debug\WpfApp3.csproj.GenerateReso
 C:\Users\ASUS\source\repos\WpfApp3\WpfApp3\obj\Debug\WpfApp3.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\source\repos\WpfApp3\WpfApp3\obj\Debug\WpfApp3.exe
 C:\Users\ASUS\source\repos\WpfApp3\WpfApp3\obj\Debug\WpfApp3.pdb
+C:\Users\ASUS\source\repos\WpfApp3\WpfApp3\obj\Debug\Window1703.g.cs
+C:\Users\ASUS\source\repos\WpfApp3\WpfApp3\obj\Debug\WpfApp3_MarkupCompile.lref
+C:\Users\ASUS\source\repos\WpfApp3\WpfApp3\obj\Debug\Window1703.baml
